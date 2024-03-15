@@ -1,11 +1,100 @@
-.App {
-  text-align: center;
+.main{
+  background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+ }
+ 
+ .pallet-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pallet-row>div {
+  flex: 1;
+  margin: 0 20px;
 }
+
+.pallet-dims-row {
+  display: flex;
+  align-items: center;
+}
+
+.pallet-dims{
+  display: flex;
+  align-items: center;
+  
+}
+
+.pallet-dims-row div {
+  align-content: flex-end !important;
+  
+}
+
+.linear-feet-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 20px;
+  
+}
+
+.linear-feet{
+  right: 0;
+}
+
+.totalpallets,
+.stackable {
+  width: 10vw;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 35px;
+}
+
+.dims{
+  width: 5vw;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 35px;
+}
+
+select {
+  height: 38px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+span {
+  margin-right: 5px;
+}
+
+h2 {
+  margin-bottom: 50px;
+} 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,25 +102,32 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
 }
 
+/* .pallet-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pallet-dims-row div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.linear-feet-row {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
