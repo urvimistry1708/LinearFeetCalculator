@@ -165,7 +165,7 @@ function App() {
             <div>
               <span>Total Pallets</span>
               <div>
-                <input type="text" className='totalpallets' name="totalpallets" placeholder='ex. 26' value={totalpallets} onChange={(e) => setTotalPallets(e.target.value)}></input>
+                <input type="number" className='totalpallets' name="totalpallets" placeholder='ex. 26' value={totalpallets} onChange={(e) => setTotalPallets(e.target.value)}></input>
               </div>
             </div>
             <div>
@@ -182,15 +182,14 @@ function App() {
                 <span>Size of 1 skid or Pallet</span>
                 <div className='pallet-dims'>
                   <div>
-                    <input type="text" className='dims' name="palletLength" placeholder='Length' value={palletLength} onChange={(e) => setPalletLength(e.target.value)}></input>
+                    <input type="number" className='dims' name="palletLength" placeholder='Length' value={palletLength} onChange={(e) => setPalletLength(e.target.value)}></input>
                   </div>
-                  &nbsp;<div>X</div> &nbsp;
+                 
                   <div>
-                    <input type="text" className='dims' name="palletWidth" placeholder='Width' value={palletWidth} onChange={(e) => setPalletWidth(e.target.value)}></input>
+                    <input type="number" className='dims' name="palletWidth" placeholder='Width' value={palletWidth} onChange={(e) => setPalletWidth(e.target.value)}></input>
                   </div>
-                  &nbsp;<div>X</div>&nbsp;
                   <div>
-                    <input type="text" className='dims' name="palletHeight" placeholder='Height' value={palletHeight} onChange={(e) => setPalletHeight(e.target.value)}></input>
+                    <input type="number" className='dims' name="palletHeight" placeholder='Height' value={palletHeight} onChange={(e) => setPalletHeight(e.target.value)}></input>
                   </div>
                 </div>
               </div>

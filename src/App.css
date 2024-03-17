@@ -1,20 +1,26 @@
-.main{
+/* Base styles */
+.main {
   background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white; 
- }
- 
- .pallet-row {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 700px; 
+}
+
+.pallet-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.pallet-row>div {
+.pallet-row > div {
   flex: 1;
   margin: 0 20px;
 }
@@ -24,15 +30,18 @@
   align-items: center;
 }
 
-.pallet-dims{
+.pallet-dims {
   display: flex;
-  align-items: center;
-  
+  justify-content: space-between;
+  padding-right: 20px; /* Adjust spacing between dims inputs */
+}
+
+.pallet-dims input {
+  margin-right: 10px; /* Add space between dims inputs */
 }
 
 .pallet-dims-row div {
   align-content: flex-end !important;
-  
 }
 
 .linear-feet-row {
@@ -42,26 +51,16 @@
   font-size: larger;
   font-weight: bold;
   margin-bottom: 20px;
-  
 }
 
-.linear-feet{
+.linear-feet {
   right: 0;
 }
 
 .totalpallets,
-.stackable {
-  width: 10vw;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  margin-top: 5px;
-  height: 35px;
-}
-
-.dims{
-  width: 5vw;
+.stackable,
+.dims {
+  width: 100%;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -72,6 +71,7 @@
 
 select {
   height: 38px;
+  width: 100%;
 }
 
 button {
@@ -82,6 +82,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
 button:hover {
@@ -94,41 +95,50 @@ span {
 
 h2 {
   margin-bottom: 50px;
-} 
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media Queries for responsiveness */
+
+/* For smaller devices (e.g., smartphones) */
+@media screen and (max-width: 576px) {
+  .main-container {
+    width: 90%;
+  }
+
+  .pallet-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pallet-row > div {
+    margin: 0;
+  }
+
+  .pallet-dims {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pallet-dims input {
+    margin-bottom: 10px;
+  }
+
+  .linear-feet-row {
+    justify-content: flex-start;
   }
 }
 
-
-
-.App-link {
-  color: #61dafb;
-}
-
-/* .pallet-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.pallet-dims-row div {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.linear-feet-row {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* For larger devices (e.g., desktops) */
+@media screen and (min-width: 992px) {
+  .dims {
+    width: 6vw; 
   }
 
-  to {
-    transform: rotate(360deg);
+  .totalpallets, .stackable{
+    width: 12vw;
+  }
+
+  .pallet-dims {
+    margin-right: 15px; /* Adjust margin between dims container and other elements */
   }
 }
